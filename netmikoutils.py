@@ -1,3 +1,5 @@
+from netmiko import ConnectHandler
+
 #Describes a router to be used with netmiko
 def def_router(type: str, hostname:str, username:str, password:str):
     router = {
