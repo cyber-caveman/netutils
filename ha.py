@@ -2,7 +2,7 @@ import re
 
 #Finds a substring using a regex and returns the match in a dictionary used as replacement map.
 #Returns an empty string if a match is not found
-def find_and_replace(string, pattern, repl_map_dict):
+def find_and_replace(string: str, pattern: str, repl_map_dict: dict):
   # Compile the regular expression pattern
   regex = re.compile(pattern)
   
@@ -29,9 +29,9 @@ def find_and_replace(string, pattern, repl_map_dict):
   # Return the modified string
   return modified_string
 
-#Given a router name find the HA peer, assuming they follow a specific naming convention (ie. pattern)
-def getHApeer(router: str, pattern: str, haMap: dict):    
-    haPair = find_and_replace(router, pattern, haMap)
+#Given a devcie name, find the HA peer, assuming they follow a specific naming convention (ie. pattern)
+def getHApeer(device: str, pattern: str, haMap: dict):    
+    haPair = find_and_replace(device, pattern, haMap)
     if haPair == "":
         print('Pair not found')
     
