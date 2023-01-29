@@ -1,6 +1,6 @@
 import re
 
-#Finds a substring using a regex and returns the match in a dictionary used as replacement map.
+#Finds a substring using a regex and returns the match in a dictionary used as replacement map. 
 #Returns an empty string if a match is not found
 def find_and_replace(string: str, pattern: str, repl_map_dict: dict):
   # Compile the regular expression pattern
