@@ -31,9 +31,9 @@ def find_and_replace(string: str, pattern: str, repl_map_dict: dict):
   return modified_string
 
 #Given a devcie name, find the HA peer, assuming they follow a specific naming convention (ie. pattern)
-def get_ha_peer(device: str, pattern: str, haMap: dict):    
-    haPair = find_and_replace(device, pattern, haMap)
-    if haPair == "":
+def get_ha_peer(device: str, pattern: str, ha_map: dict):    
+    ha_pair = find_and_replace(device, pattern, ha_map)
+    if ha_pair == "":
         print('Pair not found')
     
-    return haPair
+    return ha_pair
